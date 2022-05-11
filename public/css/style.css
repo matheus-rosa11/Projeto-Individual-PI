@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    height: 70px;
+    border-bottom: solid 1px black;
+}
+
+.header .menu {
+    display: flex;
+    margin: 0 auto;
+}
+
+.header .menu ul {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.header h1 {
+    margin-left: 30px;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+}
+
