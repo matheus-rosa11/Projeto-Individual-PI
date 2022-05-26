@@ -1,113 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
-
 body {
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    background-color: #38006b;
+    max-width: 100vw;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-.header {
+header .header-main {
     display: flex;
-    position: fixed;
-    width: 100vw;
-    height: 70px;
-    box-shadow: 1px 1px 5px rgb(5, 5, 5);
-    background-color: #6A1B9A;
-}
-
-.header h1 {
-    margin: 0px 30px;
-    align-self: center;
-    font-weight: 500;
-}
-
-.header .menu {
-    display: flex;
-    margin: 0 auto;
-}
-
-.header .menu ul {
-    display: flex;
-    align-items: center;
-    width: 500px;
+    width: 100%;
+    height: 150px;
+    background-color: #F5D639;
     justify-content: space-between;
-    list-style-type: none;
+    
 }
 
-.header .menu ul li {
-    font-size: 20px;
+header .vector1 {
+    width: 50%;
+    height: 100%;
+    background: #363636;
+    transform: skew(-50deg);
 }
 
-
-.header .btn_cadastro {
+header .logo {
     display: flex;
+    width: 261px;
+    height: 90px;
+    left: 12px;
+    top: 50px;
+    background-color: #AD9C5D;
+    border-radius: 60px;
     align-items: center;
-    margin: 0px 30px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-
-.header a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white
-}
-
-main {
-    display: flex;
     justify-content: center;
+    font-size: 60px;
 }
 
-main .main-container {
+header .menu {
     display: flex;
-    height: 800px;
-    width: 100vw;
-    background-image: url("../assets/imgs/main-background.png");
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position-y: -100px;
-}
+    width: 1000px;
+    height: 39px;
+    left: 336px;
+    top: 75px;
 
-main .main-container .main-heading {
-    font-family: 'Jura';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 90px;
+    background: rgba(54, 54, 54, 0.8);
+    border-radius: 80px;
     align-items: center;
-    display: flex;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 200px;
-
-    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-main .main-container .frase {
+header .container-login .login {
     position: absolute;
-    width: 476px;
-    height: 284px;
-    left: 127px;
-    top: 358px;
-    margin-left: 100px;
-
-    font-family: 'Jura';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 43px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
