@@ -12,6 +12,8 @@ function entrar() {
     }).then(function (resposta) {
         console.log("ESTOU NO THEN DO entrar()!")
 
+        div.innerHTML = (7 > 5)?console.log('Gabriel lindo'):console.log('Gabriel feio');
+        
         if (resposta.ok) {
             console.log(resposta);
 
