@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastroStyle.css">
+    <script src="js/cadastro.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="txt-logo">
+                <b id="iLogo">i</b>Song
+            </div>
+        </div>
+        <div class="container-form">
+            <h1>CADASTRO</h1>
+            <div class="formulario">
+                <p class="nome-campo">Nome</p>
+                <input id="ipt_nome" class="campo" type="text">
+                <p id="nomeMsg"></p>
+                <p class="nome-campo">Email</p>
+                <input id="ipt_email" class="campo" type="text">
+                <p id="emailMsg"></p>
+                <p class="nome-campo">Senha</p>
+                <input id="ipt_senha" class="campo" type="password">
+                <p id="senhaMsg"></p>
+                <p class="nome-campo">Confirmar Senha</p>
+                <input id="ipt_confirmacao_senha" class="campo" type="password">
+                <p id="confirmacaoSenhaMsg"></p>
+            </div>
+
+            <button onclick="validar()" class="btn-cadastro">CADASTRAR</button>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    if (senha == confirmacaoSenha) {
+        validacao = true;
+    } else {
+        validacao = false;
+    }
+    
+</script>

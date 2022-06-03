@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #363636;
+}
+
 /* body {
     max-width: 100vw;
     width: 100%;
@@ -125,4 +129,56 @@ header .menu ul {
 
 #btn-entrar {
     font-weight: 500;
+}
+
+/* BODY */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: green;
+    height: 850px;
+    width: 100%;
+}
+
+.container-box1 {
+    background: url('../assets/guitar-imgs/home\ background.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 46%;
+}
+
+.carrossel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #F5D639;
+    height: 280px;
+    width: 100%;
+}
+
+.produto {
+    height: 200px;
+    width: 200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px #363636;
+}
+
+.galery {
+    width: 100%;
+    height: 100%;
+    overflow: show;
+    border: 5px solid;
+}
+
+.galery .imagens {
+    width: 500%;
+    animation-name: animação;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.galery .imagens img {
+    width: 1%;
 }
