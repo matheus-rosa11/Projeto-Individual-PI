@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iSong</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/carrossel.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,10 +21,10 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li id="atual">HOME</li>
-                            <li>SOBRE A MÚSICA</li>
-                            <li>PRODUTOS</li>
-                            <li>CURSOS</li>
+                            <li id="atual"><em>HOME</em></li>
+                            <li><em>SOBRE A MÚSICA</em></li>
+                            <li><em>PRODUTOS</em></li>
+                            <li><em>CURSOS</em></li>
                         </ul>
                     </div>
                 </div>
@@ -36,28 +37,64 @@
                 </div>
             </div>
         </div>
-
-        <!-- BODY -->
-        <div class="container">
-
-            <!-- <div class="container-box1">
-
-            </div> -->
-            
-            <section class="galery">
-                <div class="imagens">
-                    <img src="assets/products/elixir-violao.png" alt="">
-                    <img src="assets/products/combo-palhetas-celuloid.png" alt="">
-                    <img src="assets/products/guitarra-muriels-sunset.png" alt="">
-                    <img src="assets/products/giannini-n14.png" alt="">
-                </div>
-            </section>
-
-        </div>
-
-        <div class="container-box2">
-
-        </div>
     </header>
+
+    <section>
+        <div id="bg-img">
+            <img src="assets/guitar-imgs/home background.jpg" alt="">
+            <div class="titulo">
+                <h1>MELHORES PROMOÇÕES</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrossel">
+        <div class="container-btn-carrossel"><button class="btn-carrossel" onclick="carrosselRight()"><</button></div>
+        <div class="carrossel">
+            <div class="container-carrossel" id="img">
+                <img src="assets/products/elixir-violao.png" alt="">
+                <img src="assets/products/combo-palhetas-celuloid.png" alt="">
+                <img src="assets/products/combo-utils.png" alt="">
+                <img src="assets/products/pedal-fender.png" alt="">
+                <img src="assets/products/elixir-violao.png" alt="">
+                <img src="assets/products/combo-palhetas-celuloid.png" alt="">
+                <img src="assets/products/combo-utils.png" alt="">
+                <img src="assets/products/pedal-fender.png" alt="">
+            </div>
+        </div>
+        <div class="container-btn-carrossel"><button class="btn-carrossel" onclick="carrossel()">></button></div>
+    </section>
+
+    <div class="container-btn-compra"><button class="btn-compra">CONFIRA JÁ</button></div>
+
+    <!-- CURSOS MAIS POPULARES -->
+
+    <section>
+        <div id="bg-img">
+            <img src="assets/guitar-imgs/background-melhores-cursos.png" alt="">
+            <div class="titulo">
+                <h1>CURSOS MAIS POPULARES</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrossel">
+        <div class="container-btn-carrossel"><button class="btn-carrossel" onclick="carrosselRight()"><</button></div>
+        <div class="carrossel">
+            <div class="container-carrossel" id="img">
+                <img src="assets/products/elixir-violao.png" alt="">
+                <img src="assets/products/combo-palhetas-celuloid.png" alt="">
+                <img src="assets/products/combo-utils.png" alt="">
+                <img src="assets/products/pedal-fender.png" alt="">
+                <img src="assets/products/elixir-violao.png" alt="">
+                <img src="assets/products/combo-palhetas-celuloid.png" alt="">
+                <img src="assets/products/combo-utils.png" alt="">
+                <img src="assets/products/pedal-fender.png" alt="">
+            </div>
+        </div>
+        <div class="container-btn-carrossel"><button class="btn-carrossel" onclick="carrossel()">></button></div>
+    </section>
+
+    <div class="container-btn-compra"><button class="btn-compra">CONFIRA JÁ</button></div>
 </body>
 </html>
