@@ -1,72 +1,66 @@
 function entrar() {
-    aguardar();
 
-    var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
 
-    console.log("FORM LOGIN: ", formulario.get("login"));
-    console.log("FORM SENHA: ", formulario.get("senha"));
-
-    fetch("/usuarios/autenticar", {
-        method: "POST",
-        body: formulario
-    }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!")
-        
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-
-                sessionStorage.LOGIN_USUARIO = json.login;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
-
-                setTimeout(function () {
-                    window.location = "/index.html";
-                }, 1000);
-            });
-
-        } else {
-
-            console.log("Erro de login!");
-
-            resposta.text().then(texto => {
-                console.error(texto);
-                // limparFormulario();
-                finalizarAguardar(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-
-    return false;
-}
-
-function validarSessao() {
-    aguardar();
-
-    var login = sessionStorage.LOGIN_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
-
-    var h1Titulo = document.getElementById("h1_titulo");
-
-    if (login != null && nome != null) {
-        // window.alert(`Seja bem-vindo, ${nome}!`);
-        h1Titulo.innerHTML = `${login}`;
-
-        finalizarAguardar();
+    if (emailVar == "" || senhaVar == "") {
+        alert('Preencha todos os campos!');
+        return false;
     } else {
-        window.location = "login.html";
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+    
+            if (resposta.ok) {
+                console.log(resposta);
+    
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+    
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.NOME_USUARIO = json.nomeUsuario;
+                    sessionStorage.EMAIL_USUARIO = json.emailUsuario;
+                    sessionStorage.PONTOS_USUARIO = json.pontos;
+    
+                    setTimeout(function () {
+                        window.location = "../user_area/userIndex.html";
+                    }, 1000); // apenas para exibir o loading
+    
+                });
+    
+            } else {
+    
+                console.log("Houve um erro ao tentar realizar o login!");
+    
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+    
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    
+        return false;
     }
+
 }
 
 function sair() {
-    aguardar();
     sessionStorage.clear();
-    finalizarAguardar();
     window.location = "login.html";
 }
+

@@ -9,18 +9,22 @@
 body {
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background: #363636;
     overflow-x: hidden;
 }
+
+
+
+/* body {
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+} */
 
 header .header-main {
     background: url("../assets/background-menu.png");
     background-repeat: round;
     display: flex;
-}
-
-header .logo a {
-    text-decoration: none;
 }
 
 .container-menu {
@@ -105,7 +109,7 @@ header .menu ul li a {
 }
 
 .menu ul #atual:hover:after{
-    transform: scaleX(1.5); 
+    transform: scaleX(1.1); 
 }
 
 .menu ul #home:hover:after{
@@ -116,9 +120,10 @@ header .menu ul li a {
     transform: scaleX(2.3); 
 }
 
-.menu ul #cursos:hover:after{
-    transform: scaleX(1.1); 
+.menu ul #produtos:hover:after{
+    transform: scaleX(1.5); 
 }
+
 
 .menu ul li:after{
     transform-origin:  0% 50%; 
@@ -175,76 +180,4 @@ header .menu ul li a {
 
 #btn-entrar {
     font-weight: 500;
-}
-
-.pagina-produtos {
-    display: flex;
-    height: 1000px;
-}
-
-.container-filtros {
-    width: 15%;
-    background: #D9D9D9;
-}
-
-.container-produtos {
-    display: flex;
-    margin: 70px 60px;
-    width: 85%;
-    background: #ffffff;
-    flex-wrap: wrap;
-}
-
-.template {
-    margin: 20px;
-    height: 300px;
-    width: 200px;
-    border: 1px solid black;
-    transform: scale(1);
-    transition: all .2s ease-in-out;
-    transition-duration: 0.2s;
-    align-items: center;
-}
-
-.template:hover {
-    box-shadow: 2px 2px 4px #343434;
-    transform: scale(1.01);
-    transition: all .2s ease-in-out;
-    transition-duration: 0.2s;
-    align-items: center;
-}
-
-.template img {
-    width: 200px;
-    align-items: center;
-}
-
-.produto {
-    height: 80%;
-    border-bottom: 1px solid black;
-    overflow: hidden;
-}
-
-.desc {
-    display: flex;
-    height: 20%;
-    background: #d9d9d9;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    /* padding-top: 20px; */
-    transition: all .2s ease-in-out;
-    transition-duration: 0.2s;
-}
-
-.desc:hover {
-    transition: all .2s ease-in-out;
-    transition-duration: 0.2s;
-    background: #F5D639;
-}
-
-.desc p {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin: 0 auto;
 }
