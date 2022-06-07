@@ -9,7 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background: #363636;
+    background: #F5D639;
     overflow-x: hidden;
 }
 
@@ -90,7 +90,50 @@ header .menu ul {
     /* font-weight: 400; */
     justify-content: space-around;
     color: #343434;
-    text-shadow: 0px 1px 4px #b5a004;
+    /* text-shadow: 0px 1px 30px #000000; */
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: #343434;
+}
+
+.menu ul li:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #010101;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    /* margin-left: 10px; */
+    width: 85px;
+}
+
+.menu ul #home:hover:after{
+    transform: scaleX(0.8); 
+}
+
+.menu ul #atual:hover:after{
+    transform: scaleX(2.3); 
+}
+
+.menu ul #produtos:hover:after{
+    transform: scaleX(1.5); 
+}
+
+.menu ul #cursos:hover:after{
+    transform: scaleX(1.1); 
+}
+
+.menu ul li:after{
+    transform-origin: 0% 50%; 
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: #343434;
+    /* border-bottom: solid 2px #343434; */
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
 }
 
 #atual {
@@ -209,28 +252,26 @@ header .menu ul {
 .titulo {
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin: 15px auto;
     text-align: center;
-    background: #1c1c1c;
+    background: #383838;
     height: 60px;
-    width: 600px;
+    width: 400px;
     border-radius: 30px;
 }
 
 .titulo h1 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 36px;
     text-shadow: 2px 2px 4px black;
     /* background: #1c1c1c; */
+    padding-top: 5px;
     height: 60px;
-    width: 600px;
-    text-align: center;
+    width: 300px;
     margin: 0 auto;
-    position: absolute;
+    /* position: absolute; */
     color: white;
-    margin: 0 auto;
 }
 
 .container-btn-compra {
@@ -251,6 +292,98 @@ header .menu ul {
     border-radius: 30px;
     color: #333333;
     text-shadow: 0px 4px 6px #00000067;
+}
+
+.container-section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    background: url(../assets/guitar-imgs/background-sobre.png);
+}
+
+.container-section2 {
+    /* background: #F5D639; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    /* background: url(../assets/guitar-imgs/background-sobre.png) */
+}
+
+.container-section3 {
+    /* background: #F5D639; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    /* background: url(../assets/guitar-imgs/background-sobre.png) */
+}
+
+.container-section1 .container-text1 {
+    margin: 0 auto;
+    width: 100vw;
+    height: 550px;
+    background: #383838e7;
+}
+
+.container-section2 .container-text1 {
+    margin: 0 auto;
+    width: 100vw;
+    height: 750px;
+    background: #383838;
+    /* margin-top: 50px; */
+}
+
+.container-section3 .container-text1 {
+    margin: 0 auto;
+    width: 100vw;
+    height: 1000px;
+    background: #383838;
+    /* margin-top: 50px; */
+}
+
+.container-text1 h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.container-section1 .container-text1 p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.container-section2 .container-text1 p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.container-section2 .container-text1 ul li {
+    font-family: 'Quicksand', sans-serif;
+    list-style: circle;
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.container-section3 .container-text1 p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
 
 
