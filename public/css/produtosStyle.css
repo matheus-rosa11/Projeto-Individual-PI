@@ -27,6 +27,10 @@ header .header-main {
     display: flex;
 }
 
+header .logo a {
+    text-decoration: none;
+}
+
 .container-menu {
     width: 90%;
     display: flex;
@@ -207,6 +211,7 @@ header .menu ul li a {
     transform: scale(1);
     transition: all .2s ease-in-out;
     transition-duration: 0.2s;
+    align-items: center;
 }
 
 .template:hover {
@@ -214,6 +219,12 @@ header .menu ul li a {
     transform: scale(1.01);
     transition: all .2s ease-in-out;
     transition-duration: 0.2s;
+    align-items: center;
+}
+
+.template img {
+    width: 200px;
+    align-items: center;
 }
 
 .produto {
@@ -223,6 +234,25 @@ header .menu ul li a {
 }
 
 .desc {
+    display: flex;
     height: 20%;
     background: #d9d9d9;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    /* padding-top: 20px; */
+    transition: all .2s ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.desc:hover {
+    transition: all .2s ease-in-out;
+    transition-duration: 0.2s;
+    background: #F5D639;
+}
+
+.desc p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin: 0 auto;
 }
