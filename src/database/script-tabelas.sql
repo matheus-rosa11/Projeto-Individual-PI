@@ -53,6 +53,8 @@ CREATE TABLE Matricula (
 
 
 
+
+
 /* para sql server - remoto - produção */
 
 CREATE TABLE usuario (
@@ -76,5 +78,7 @@ CREATE TABLE medida (
 	momento DATETIME,
 	fk_aquario INT
 );
+
+
 
 

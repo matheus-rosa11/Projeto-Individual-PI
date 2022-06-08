@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboardStyle.css">
+    <script src="../dashboard/dashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+
+            <div class="voltar" onclick="voltar()">
+
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="userIndex.html">PERFIL</a></li>
+                    <li><a href="userCourses.html">CURSOS</a></li>
+                    <li><a href="userProducts.html">PRODUTOS</a></li>
+                    <li><a href="dashboard.html">DASHBOARD</a></li>
+                </ul>
+            </div>
+
+            <div class="foto-perfil">
+                <div class="container-img">
+                    <img src="../assets/profile-pictures/perfil_linkedin_v0.jpg" alt="IMAGEM">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="graph">
+            <canvas id="canvas_grafico"></canvas>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function voltar() {
+        window.location = '../index.html'
+    }
+</script>

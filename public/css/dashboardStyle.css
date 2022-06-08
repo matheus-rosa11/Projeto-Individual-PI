@@ -68,67 +68,12 @@ header .header .foto-perfil .container-img img {
     height: 100%;
 }
 
+header .header .voltar {
+    cursor: pointer;
+}
+
 .container {
-    display: flex;
-    height: 90vh;
-    width: 100%;
     background: #1D1D1D;
-    align-items: center;
-}
-
-.container section {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-}
-
-.logo {
-    display: flex;
-    width: 261px;
-    background-color: #AD9C5D;
-    border-radius: 60px;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    height: 90px;
-    margin: 0 auto;
-    margin-bottom: 60px;
-}
-
-.logo .txt-logo {
-    font-family: 'Prompt', sans-serif;
-    color: #363636;
-}
-
-.logo {
-    text-shadow: -3px 3px 8px rgba(0, 0, 0, 0.7);
-}
-
-.logo #iLogo {
-    color: #F5D639;
-}
-
-.container section .container-dados {
-    background: #D3D3D3;
-    height: 650px;
-    width: 900px;
-}
-
-.container section .container-dados ul {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-}
-
-.container section .container-dados ul li {
-    margin: 0 auto;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 36px;
-    list-style: none;
-    font-weight: 600;
-}
-
-.container section .container-dados ul .valor {
-    margin: 20px auto;
-    font-weight: 400;
+    height: 90vh;
+    width: 100vw;
 }
