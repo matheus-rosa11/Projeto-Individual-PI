@@ -25,10 +25,9 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li id="home"><em>HOME</em></li>
+                            <li id="home"><em><a href="index.html">HOME</a></em></li>
                             <li id="sobre"><em><a href="sobre.html">SOBRE A MÚSICA</a></em></li>
                             <li id="atual"><em><a href="produtos.html">PRODUTOS</a></em></li>
-                            <li id="cursos"><em><a href="cursos.html">CURSOS</a></em></li>
                         </ul>
                     </div>
                 </div>
@@ -50,6 +49,11 @@
         <div class="container-produtos">
             <div class="template">
 
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
+
                 <div class="produto" >
                     <img src="assets/products/combo-utils.png" alt="">
                 </div>
@@ -59,73 +63,127 @@
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/amp-cubo-vorax.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="amplificador"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/combo-palhetas-celuloid.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="combo-palhetas"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/cordas-daddario.jpg" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="cordas-daddario"></p>
                 </div>
             </div>
             <div class="template">
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/elixir-violao.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="cordas-elixir"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/giannini-n14.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="combo-violao"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/suporte-violao-removebg-preview.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="suporte-parede"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/palheta-dunlop.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="palheta-flow"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/pedal-fender.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="pedal-fender"></p>
                 </div>
             </div>
             <div class="template" >
+                <div class="dropdown-content">
+                    <div class="preco">Preço: X</div>
+                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                </div>
                 <div class="produto">
                     <img src="assets/products/suporte-dobravel.png" alt="">
                 </div>
+                
+                
                 <div class="desc">
                     <p id="suporte-chao"></p>
                 </div>
@@ -136,3 +194,13 @@
 </body>
 
 </html>
+
+<script>
+    function comprar() {
+        alert('Parabéns pela compra!')
+
+        setTimeout(() => {
+            window.location = 'index.html'
+        }, 1000);
+    }
+</script>

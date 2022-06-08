@@ -2,7 +2,6 @@ const imgs = document.getElementById("img");
 const img = document.querySelectorAll('#img img');
 
 let idx = 0;
-let idx2 = 0;
 
 function carrossel(){
     idx++;

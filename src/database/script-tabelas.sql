@@ -28,28 +28,34 @@ CREATE TABLE Curso (
 	preco decimal(10,2)
 );
 
-CREATE TABLE Venda (
-	idVenda int auto_increment,
-	fkProduto int,
-	foreign key (fkProduto) references Produto(idProduto),
+create table venda (
+	idVenda int primary key AUTO_INCREMENT,
 	fkUsuario int,
-	foreign key (fkUsuario) references Usuario(idUsuario),
-	primary key (idVenda, fkProduto, fkUsuario),
-	dtVenda date,
-	tipoVenda varchar(45),
-	parcelas int,
-	desconto decimal(10,2)
+	foreign key(fkUsuario) references usuario(idUsuario),
+	fkProduto int,
+	foreign key(fkProduto) references produto(idProduto),
+	fkCurso int,
+	foreign key(fkCurso) references curso(idCurso),
+	dtVenda date
 );
 
-CREATE TABLE Matricula (
-	idMatricula int auto_increment,
-	fkUsuario int,
-	foreign key (fkUsuario) references Usuario(idUsuario),
-	fkCurso int,
-	foreign key (fkCurso) references Curso(idCurso),
-	primary key(idMatricula, fkUsuario, fkCurso),
-	dtMatricula date
-);
+-- CREATE TABLE Venda (
+-- 	fkProduto int,
+-- 	foreign key (fkProduto) references Produto(idProduto),
+-- 	fkUsuario int,
+-- 	foreign key (fkUsuario) references Usuario(idUsuario),
+-- 	primary key (fkProduto, fkUsuario),
+-- 	dtVenda date
+-- );
+
+-- CREATE TABLE Matricula (
+-- 	fkUsuario int,
+-- 	foreign key (fkUsuario) references Usuario(idUsuario),
+-- 	fkCurso int,
+-- 	foreign key (fkCurso) references Curso(idCurso),
+-- 	primary key(fkUsuario, fkCurso),
+-- 	dtMatricula date
+-- );
 
 
 

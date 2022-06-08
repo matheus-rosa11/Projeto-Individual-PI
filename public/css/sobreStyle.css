@@ -93,15 +93,16 @@ header .menu ul {
     /* text-shadow: 0px 1px 30px #000000; */
 }
 
-header .menu ul li a {
+header .header-main .container-menu .menu ul li a {
+    color: #FDFDFD;
+    text-shadow: 0px 0px 10px #1D1D1D;
     text-decoration: none;
-    color: #343434;
 }
 
 .menu ul li:after {
     display:block;
     content: '';
-    border-bottom: solid 2px #010101;
+    border-bottom: solid 2px #FFFFFF;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     /* margin-left: 10px; */
@@ -297,6 +298,7 @@ header .menu ul li a {
 .container-section1 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 700px;
     background: url(../assets/guitar-imgs/background-sobre.png);
@@ -355,7 +357,7 @@ header .menu ul li a {
 
 .container-section1 .container-text1 p {
     font-family: 'Quicksand', sans-serif;
-    font-size: 48px;
+    font-size: 200%;
     color: white;
     text-align: center;
     padding: 30px;
@@ -363,7 +365,7 @@ header .menu ul li a {
 
 .container-section2 .container-text1 p {
     font-family: 'Quicksand', sans-serif;
-    font-size: 48px;
+    font-size: 200%;
     color: white;
     text-align: center;
     padding: 30px;
@@ -374,13 +376,13 @@ header .menu ul li a {
     list-style: circle;
     color: white;
     text-align: center;
-    font-size: 38px;
+    font-size: 200%;
     margin-top: 20px;
 }
 
 .container-section3 .container-text1 p {
     font-family: 'Quicksand', sans-serif;
-    font-size: 48px;
+    font-size: 200%;
     color: white;
     text-align: center;
     padding: 30px;

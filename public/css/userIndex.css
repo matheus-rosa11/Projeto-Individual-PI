@@ -90,18 +90,15 @@ header .header .foto-perfil .container-img img {
     align-items: center;
     justify-content: center;
     font-size: 60px;
-    height: 90px;
+    height: 90%;
     margin: 0 auto;
     margin-bottom: 60px;
+    text-shadow: -3px 3px 8px rgba(0, 0, 0, 0.7);
 }
 
 .logo .txt-logo {
     font-family: 'Prompt', sans-serif;
     color: #363636;
-}
-
-.logo {
-    text-shadow: -3px 3px 8px rgba(0, 0, 0, 0.7);
 }
 
 .logo #iLogo {
