@@ -1,8 +1,8 @@
 insert into usuario VALUES
-    (null, 'Matheus', 'matheus@email.com', 'matheus123', 0),
-    (null, 'Alejandro', 'alejandro@email.com', 'alejandro123', 0),
-    (null, 'Doulgas', 'doulgas@email.com', 'doulgas123', 0),
-    (null, 'Eduardo', 'eduardo@email.com', 'eduardo123', 0);
+    (null, 'Matheus', 'matheus@email.com', 'matheus123'),
+    (null, 'Alejandro', 'alejandro@email.com', 'alejandro123'),
+    (null, 'Doulgas', 'doulgas@email.com', 'doulgas123'),
+    (null, 'Eduardo', 'eduardo@email.com', 'eduardo123');
 
 
 insert into produto(nomeProduto, descricao, preco) VALUES

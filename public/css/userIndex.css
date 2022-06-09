@@ -129,7 +129,7 @@ header .sair {
 .logo {
     display: flex;
     width: 250px;
-    height: 150px;
+    height: 120px;
     background-color: #AD9C5D;
     border-radius: 60px;
     align-items: center;
@@ -155,9 +155,9 @@ section {
 
 .container section .container-dados {
     background: #D3D3D3;
-    height: 650px;
-    width: 900px;
-    border-radius: 30xp;
+    height: 50%;
+    width: 500px;
+    border-radius: 30px;
 }
 
 .container section .container-dados ul {
@@ -169,7 +169,7 @@ section {
 .container section .container-dados ul li {
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     list-style: none;
     font-weight: 600;
 }
