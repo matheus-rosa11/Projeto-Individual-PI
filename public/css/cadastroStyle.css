@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .logo {
@@ -65,8 +66,8 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-top: 70px;
-    height: 440px;
+    margin-top: 3vh;
+    height: 420px;
     width: 300px;
 }
 
@@ -88,6 +89,7 @@
 
 .btn-cadastro {
     margin: 0 auto;
+
     width: 200px;
     height: 50px;
     border-style: none;
@@ -110,4 +112,25 @@
     transition: all .2s ease-in-out;
     transition-duration: 0.3s;
     box-shadow: 0px 1px 8px #F5D639;
+}
+
+#redirect-login {
+    font-family: 'Quicksand', sans-serif;
+    width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: #F5D639;
+    font-size: 20px;
+    margin-top: 50px;
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+    transition-duration: 0.2s;
+}
+
+#redirect-login:hover {
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+    transition-duration: 0.2s;
+    text-shadow: 0px 1px 8px #F5D639;
 }

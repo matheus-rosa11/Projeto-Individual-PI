@@ -26,6 +26,11 @@ header .header .voltar {
     width: 40px;
     background: url('../assets/icon/Voltar.png') no-repeat;
     margin-left: 30px;
+    cursor: pointer;
+}
+
+header .header .voltar:hover {
+    border-bottom: 2px solid #F5D639;
 }
 
 header .header .menu {
@@ -44,6 +49,32 @@ header .header .menu ul li {
     font-size: 36px;
     list-style: none;
     font-weight: 300;
+}
+
+header .header .menu ul li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #FFFFFF;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    /* margin-left: 10px; */
+    width: 85px;
+}
+
+header .header .menu ul #perfil:hover:after{
+    transform: scaleX(1.35); 
+}
+
+header .header .menu ul #cursos:hover:after{
+    transform: scaleX(1.65); 
+}
+
+header .header .menu ul #produtos:hover:after{
+    transform: scaleX(2.28); 
+}
+
+header .header .menu ul li:after{
+    transform-origin:  0% 50%; 
 }
 
 header .header .menu ul li a {

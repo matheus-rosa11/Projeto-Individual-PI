@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <title>iSong</title>
     <link rel="stylesheet" href="css/indexStyle.css">
     <script src="js/carrossel.js" defer></script>
+    <script src="js/funcoes.js" defer></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 </head>
 
-<body>
+<body onload="obterDadosGrafico()">
     <header>
         <!-- HEADER -->
         <div class="header-main">
@@ -24,13 +27,13 @@
                         <ul>
                             <li id="atual"><em><a href="#">HOME</a></em></li>
                             <li id="sobre"><em><a href="sobre.html">SOBRE A MÚSICA</a></em></li>
-                            <li id="produtos"><em><a href="produtos.html">PRODUTOS</a></em></li>
+                            <li id="produtos"><em><a onclick="entrarProdutos()" href="#">PRODUTOS</a></em></li>
                         </ul>
                     </div>
                 </div>
                 <div class="cadLog">
                     <div class="btn-cadastro-login">
-                        <a id="btn-entrar" href="login.html">ENTRE</a>
+                        <a onclick="verificar()" id="btn-entrar" href="#">ENTRE</a>
                         <p id="ou">ou</p>
                         <a id="btn-cadastro" href="cadastro.html">CADASTRE-SE</a>
                     </div>
@@ -49,7 +52,9 @@
     </section>
 
     <section id="carrossel">
-        <div class="container-btn-carrossel"><button class="btn-carrossel" onclick="carrosselRight()"><</button></div>
+        <div class="container-btn-carrossel"><button class="btn-carrossel" onclick="carrosselRight()">
+                << /button>
+        </div>
         <div class="carrossel">
             <div class="container-carrossel" id="img">
                 <img src="assets/products/elixir-violao.png" alt="">
@@ -67,5 +72,107 @@
 
     <div class="container-btn-compra"><a href="produtos.html"><button class="btn-compra">CONFIRA JÁ</button></a></div>
 
+
+    <section>
+        <div class="container-ranking">
+            <div class="titulo-ranking">
+                <h1>RANKING</h1>
+            </div>
+            <div class="container-grafico">
+                <div class="graph">
+                    <canvas id="canvas_grafico"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
+
+<script>
+    window.onload = obterDadosGrafico(1)
+
+    function obterDadosGrafico(idAquario) {
+        // alterarTitulo(idAquario)
+
+        // if (proximaAtualizacao != undefined) {
+        //     clearTimeout(proximaAtualizacao);
+        // }
+
+        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+
+
+
+    function plotarGrafico(resposta, idAquario) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    // yAxisID: 'y-umidade',
+                    label: 'Pontos',
+                    borderColor: '#fff',
+                    backgroundColor: 'yellow',
+                    fill: true,
+                    data: []
+                }
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.pessoas); //EIXO X DO GRAFICO
+            dados.datasets[0].data.push(registro.pontos); //EIXO Y DO GRAFICO
+            // dados.datasets[1].data.push(registro.temperatura);
+        }
+
+        console.log(JSON.stringify(dados));
+
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = new Chart(ctx, {
+            type: 'bar',
+            data: dados,
+            options: {
+                scales: {
+                    y: {
+                    ticks: { color: '#fff' }
+                },
+                x: {
+                    ticks: { color: '#fff' }
+                },
+                    yAxes: [{
+                        // type: 'linear',
+                        // display: true,
+                        // position: 'left',
+                        // id: 'y-temperatura',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 1000,
+                            min: 0
+                        }
+                    }],
+                },
+            }
+        });
+
+        // setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+    }
+</script>

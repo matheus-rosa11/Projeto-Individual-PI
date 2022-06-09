@@ -10,7 +10,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background: #363636;
+    background: #F5D639;
     overflow-x: hidden;
 }
 
@@ -100,7 +100,7 @@ header .menu ul li a {
 }
 
 .menu ul li:after {
-    display:block;
+    display: block;
     content: '';
     border-bottom: solid 2px #FFFFFF;
     transform: scaleX(0);
@@ -190,8 +190,10 @@ header .menu ul li a {
     align-items: flex-end;
     margin: 0 auto;
     width: 100vw;
-    height: 500px;
+    height: 60vh;
     background: #FFE252;
+    color: #363636;
+    color: #5A5A5A;
 }
 
 .carrossel {
@@ -282,8 +284,9 @@ header .menu ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 101%;
     height: 150px;
+    background: #363636;
 }
 
 .btn-compra {
@@ -295,10 +298,40 @@ header .menu ul li a {
     border: none;
     background: #ffe252;
     border-radius: 30px;
-    color: #333333;
+    color: #363636;
     text-shadow: 0px 4px 6px #00000067;
     cursor: pointer;
 }
 
+.container-ranking {
+    height: 100vh;
+    width: 105%;
+    background: #363636;
+}
 
+.container-ranking .titulo-ranking h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    height: 200px;
+    padding-top: 100px;
+    font-weight: 300;
+    color: #FDFDFD;
+    text-align: center;
+}
 
+.container-grafico {
+    margin: 0 auto;
+    width: 55%;
+    height: 70%;
+    color: white;
+}
+
+.graph{
+    background-color: rgb(193, 193, 193);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.graficoC{
+    color: white;
+}

@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="../css/userProducts.css">
+    <script src="../js/funcoes.js"></script>
 </head>
 
 <body>
     <header>
         <div class="header">
 
-            <div class="voltar">
+            <div onclick="voltar()" class="voltar">
 
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a href="userIndex.html">PERFIL</a></li>
-                    <li><a href="userCourses.html">CURSOS</a></li>
-                    <li><a href="#">PRODUTOS</a></li>
+                    <li id="perfil"><a href="userIndex.html">PERFIL</a></li>
+                    <li id="cursos"><a href="userCourses.html">CURSOS</a></li>
+                    <li id="produtos"><a href="#">PRODUTOS</a></li>
                 </ul>
             </div>
 
@@ -35,7 +36,7 @@
 
     <div class="container">
         <div class="container-nomecliente">
-            <h1><em>NOMECLIENTE</em></h1>
+            <h1><em id="nome-cliente">NOMECLIENTE</em></h1>
         </div>
 
         <div class="tabela">
@@ -110,3 +111,7 @@
 </body>
 
 </html>
+
+<script>
+    document.getElementById('nome-cliente').innerHTML = sessionStorage.NOME_USUARIO;
+</script>

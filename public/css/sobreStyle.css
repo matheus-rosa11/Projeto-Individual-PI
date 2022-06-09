@@ -121,6 +121,7 @@ header .header-main .container-menu .menu ul li a {
     transform: scaleX(1.5); 
 }
 
+
 .menu ul #cursos:hover:after{
     transform: scaleX(1.1); 
 }
@@ -387,6 +388,3 @@ header .menu ul li a {
     text-align: center;
     padding: 30px;
 }
-
-
-

@@ -22,23 +22,23 @@ CREATE TABLE Produto (
 	preco decimal(10,2)
 );
 
-CREATE TABLE Curso (
-	idCurso INT PRIMARY KEY AUTO_INCREMENT,
-	nomeCurso varchar(45),
-	preco decimal(10,2)
-);
-
 create table venda (
-	idVenda int primary key AUTO_INCREMENT,
+	idVenda int AUTO_INCREMENT,
 	fkUsuario int,
 	foreign key(fkUsuario) references usuario(idUsuario),
 	fkProduto int,
 	foreign key(fkProduto) references produto(idProduto),
-	fkCurso int,
-	foreign key(fkCurso) references curso(idCurso),
-	dtVenda date
+	primary key(idVenda, fkUsuario, fkProduto),
+	dtVenda datetime default current_timestamp
 );
 
+create table pontuacao (
+	idPontuacao int AUTO_INCREMENT,
+	fkUsuario int,
+	foreign key(fkUsuario) references usuario(idUsuario),
+	primary key(idPontuacao, fkUsuario),
+	pontos int
+);
 -- CREATE TABLE Venda (
 -- 	fkProduto int,
 -- 	foreign key (fkProduto) references Produto(idProduto),

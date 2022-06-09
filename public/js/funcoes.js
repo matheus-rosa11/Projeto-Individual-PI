@@ -1,4 +1,35 @@
 // sessão
+var autenticacao = sessionStorage.length > 0;
+
+if (autenticacao) {
+    document.getElementById('btn-entrar').innerHTML = 'PERFIL';
+}
+
+function entrarProdutos() {
+    if (!autenticacao) {
+        alert('Faça cadastro para acessar a página de produtos!');
+
+        setTimeout(() => {
+            window.location = 'cadastro.html';
+        }, 100);
+
+    } else {
+        window.location = 'produtos.html';
+    }
+}
+
+function voltar() {
+    window.location = '../index.html';
+}
+
+function verificar() {
+    if (!autenticacao) {
+        window.location = 'login.html';
+    } else {
+        window.location = 'user_area/userIndex.html'
+    }
+}
+
 function validarSessao() {
     // aguardar();
 
@@ -12,7 +43,7 @@ function validarSessao() {
         if (h1LoginUsuario != undefined) {
             h1LoginUsuario.innerHTML = email;
         }
-        b_usuario.innerHTML = nome;
+        // b_usuario.innerHTML = nome;
 
         // finalizarAguardar();
     } else {

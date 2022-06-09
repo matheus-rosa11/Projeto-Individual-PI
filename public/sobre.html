@@ -7,6 +7,7 @@
     <title>Sobre</title>
     <link rel="stylesheet" href="css/sobreStyle.css">
     <script src="js/carrossel.js" defer></script>
+    <script src="js/funcoes.js"></script>
 </head>
 <body>
     <header>
@@ -23,13 +24,13 @@
                         <ul>
                             <li id="home"><em><a href="index.html">HOME</a></em></li>
                             <li id="atual"><em><a href="sobre.html">SOBRE A MÚSICA</a></em></li>
-                            <li id="produtos"><em><a href="produtos.html">PRODUTOS</a></em></li>
+                            <li id="produtos"><em><a onclick="entrarProdutos()" href="#">PRODUTOS</a></em></li>
                         </ul>
                     </div>
                 </div>
                 <div class="cadLog">
                     <div class="btn-cadastro-login">
-                        <a id="btn-entrar" href="login.html">ENTRE</a>
+                        <a onclick="verificar()" id="btn-entrar" href="#">ENTRE</a>
                         <p id="ou">ou</p>
                         <a id="btn-cadastro" href="cadastro.html">CADASTRE-SE</a>
                     </div>

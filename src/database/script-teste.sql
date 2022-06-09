@@ -12,31 +12,27 @@ insert into curso VALUES
     (null, 'C2', 10.00),
     (null, 'C3', 10.00);
 
-insert into produto VALUES
-    (null, 'Violão Giannini', 'Violão muito foda', 250.00),
-    (null, 'Violão Taylor', 'Violão muito foda', 25000.00),
-    (null, 'Capotraste', 'Utilitário muito forte', 20.00),
-    (null, 'Palhetas', 'Palhetas muito boas', 10.00),
-    (null, 'Violão Crafter', 'Violão muito foda', 220.00),
-    (null, 'Guitarra Fender', 'Guitarra muito foda', 250.00);
+insert into produto(nomeProduto, descricao, preco) VALUES
+    ('Combo de Utilitários', 'Diversos produtos úteis para você tocar suas músicas!', 100.00),
+    ('Amplificador Borne', 'Ótimo amplificador para detonar nos solos!', 350.00),
+    ("Palhetas D'Addario", 'Combo de palhetas de diversas cores, para todos os gostos!', 15.00),
+    ("Cordas D'Addario", 'Uma das melhores cordas para violão do mercado!', 40.00),
+    ('Cordas Elixir', 'A melhor corda de violão dos últimos tempos.', 120.00),
+    ('Combo Músico Completo', 'Um combo com vioão, capa e palhetas para formar um músico completo!', 550.00),
+    ('Suporte para violão e guitarra', 'Suporte de parede para guardar seu violão/guitarra!', 150.00),
+    ('Palheta Flow .60mm', 'Uma ótima palheta para um melhor desempenho nos seus solos!', 3.00),
+    ('Pedal Fender', 'O melhor produto para quem quer ser criativo com suas músicas! Loop Pedal Fender', 720.00),
+    ('Suporte para violão e guitarra', 'Suporte de chão para guardar seu violão/guitarra!', 170.00);
 
-insert into matricula VALUES
-    (1, 1, '2022-06-07'),
-    (1, 2, '2022-06-07');
-
-insert into venda VALUES
-    (3, 1, '2022-06-07'),
-    (1, 1, '2022-06-07'),
-    (2, 1, '2022-06-07');
-
-insert into venda values
-    (1, 1, 2, 2, '2022-06-08'),
-    (2, 1, 3, 1, '2022-06-08'),
-    (3, 2, 1, 1, '2022-06-08'),
-    (4, 1, 4, null, '2022-06-08'),
-    (5, 1, null, 3, '2022-06-08'),
-    (6, 1, 4, null, '2022-06-08'),
-    (7, 1, null, 3, '2022-06-08');
+insert into venda (fkUsuario, fkProduto) VALUES
+    (1, 1),
+    (1, 2),
+    (2, 2),
+    (1, 2),
+    (1, 3),
+    (3, 3),
+    (3, 2),
+    (4, 1);
 
 select u.idUsuario, u.nomeUsuario, v.idVenda, v.fkUsuario fkUsuarioVenda, v.fkProduto, m.idMatricula, m.fkUsuario fkUsuarioMatricula, m.fkCurso, m.dtMatricula
     from usuario u
@@ -107,3 +103,22 @@ select u.nomeUsuario, count(v.fkProduto)
         join usuario u
             on v.fkUsuario = u.idUsuario
                 group by u.nomeUsuario;
+
+-- AQUI TA FUNCIONANDO
+
+select count(v.fkUsuario) 'Qtd. de compras', u.nomeUsuario
+    from venda v
+        join usuario u
+            on v.fkUsuario = u.idUsuario
+                group by u.nomeUsuario;
+
+-- SELECT MUITO FODA >>>>
+
+select v.dtVenda 'Data da venda', p.preco 'Valor da venda', u.nomeUsuario 'Comprador'
+    from venda v
+        join produto p
+            on v.fkProduto = p.idProduto
+                right join usuario u
+                    on v.fkUsuario = u.idUsuario
+                        where u.idUsuario = 5
+                            group by u.nomeUsuario;

@@ -33,7 +33,7 @@
                 </div>
                 <div class="cadLog">
                     <div class="btn-cadastro-login">
-                        <a id="btn-entrar" href="login.html">ENTRE</a>
+                        <a onclick="verificar()" id="btn-entrar" href="#">ENTRE</a>
                         <p id="ou">ou</p>
                         <a id="btn-cadastro" href="cadastro.html">CADASTRE-SE</a>
                     </div>
@@ -50,8 +50,8 @@
             <div class="template">
 
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 100.00</div>
+                    <div class="botao-compra"><a onclick="comprar(1)">COMPRAR</a></div>
                 </div>
 
                 <div class="produto" >
@@ -64,8 +64,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 350.00</div>
+                    <div class="botao-compra"><a onclick="comprar(2)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/amp-cubo-vorax.png" alt="">
@@ -78,8 +78,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 15.00</div>
+                    <div class="botao-compra"><a onclick="comprar(3)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/combo-palhetas-celuloid.png" alt="">
@@ -92,8 +92,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 40.00</div>
+                    <div class="botao-compra"><a onclick="comprar(4)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/cordas-daddario.jpg" alt="">
@@ -106,8 +106,8 @@
             </div>
             <div class="template">
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 120.00</div>
+                    <div class="botao-compra"><a onclick="comprar(5)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/elixir-violao.png" alt="">
@@ -120,8 +120,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 550.00</div>
+                    <div class="botao-compra"><a onclick="comprar(6)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/giannini-n14.png" alt="">
@@ -134,8 +134,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 150.00</div>
+                    <div class="botao-compra"><a onclick="comprar(7)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/suporte-violao-removebg-preview.png" alt="">
@@ -148,8 +148,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 3.00</div>
+                    <div class="botao-compra"><a onclick="comprar(8)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/palheta-dunlop.png" alt="">
@@ -162,8 +162,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 720.00</div>
+                    <div class="botao-compra"><a onclick="comprar(9)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/pedal-fender.png" alt="">
@@ -176,8 +176,8 @@
             </div>
             <div class="template" >
                 <div class="dropdown-content">
-                    <div class="preco">Preço: X</div>
-                    <div class="botao-compra"><a onclick="comprar()">COMPRAR</a></div>
+                    <div class="preco">Preço: R$ 170.00</div>
+                    <div class="botao-compra"><a onclick="comprar(10)">COMPRAR</a></div>
                 </div>
                 <div class="produto">
                     <img src="assets/products/suporte-dobravel.png" alt="">
@@ -196,11 +196,85 @@
 </html>
 
 <script>
-    function comprar() {
-        alert('Parabéns pela compra!')
 
-        setTimeout(() => {
-            window.location = 'index.html'
-        }, 1000);
+    function comprar(stringIdProduto) {
+
+        let idProduto = Number(stringIdProduto);
+        let idUsuario = Number(sessionStorage.ID_USUARIO);
+
+        alert('Parabéns pela compra!');
+
+        cadastrarVenda(idProduto, idUsuario);
+        cadastrarPontos(20, idUsuario);
+
+        // setTimeout(() => {
+        //     window.location = 'index.html';
+        // }, 10000);
+
     }
+
+    function cadastrarVenda(idProduto, idUsuario) {
+
+        console.log("CHEGANDO AQUI");
+        
+        fetch("/usuarios/cadastrarProduto", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idProdutoServer: idProduto,
+                idUsuarioServer: idUsuario
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                throw('belezinha')
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function cadastrarPontos(pontos, idUsuario) {
+
+        console.log("CHEGANDO AQUI");
+
+        fetch("/usuarios/cadastrarPontos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                pontosServer: pontos,
+                idUsuarioServer: idUsuario
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                throw('belezinha')
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro da pontuação!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+        }
+
 </script>
