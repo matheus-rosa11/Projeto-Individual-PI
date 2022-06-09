@@ -1,10 +1,6 @@
 // sessão
 var autenticacao = sessionStorage.length > 0;
 
-if (autenticacao) {
-    document.getElementById('btn-entrar').innerHTML = 'PERFIL';
-}
-
 function entrarProdutos() {
     if (!autenticacao) {
         alert('Faça cadastro para acessar a página de produtos!');
@@ -72,6 +68,11 @@ function finalizarAguardar(texto) {
     if (texto) {
         divErrosLogin.innerHTML = texto;
     }
+}
+
+function sair() {
+    sessionStorage.clear()
+    window.location = '../index.html'
 }
 
 

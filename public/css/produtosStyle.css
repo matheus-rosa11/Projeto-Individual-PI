@@ -253,13 +253,14 @@ header .menu ul li a {
 }
 
 .dropdown-content {
+    font-family: 'Quicksand', sans-serif;
     display: none;
     position: absolute;
     background: hsla(0, 0%, 100%, 0.781);
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: 79.4%;
     margin-bottom: 100px;
     text-align: center;
     min-width: 120px;
@@ -269,5 +270,30 @@ header .menu ul li a {
 
 .template:hover .dropdown-content {
     display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.template:hover .dropdown-content .preco {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.template:hover .dropdown-content .botao-compra {
+    cursor: pointer;
+    background: #F5D639;
+    /* width: 120px; */
+    padding: 12px;
+    border-radius: 15px;
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+    transition-duration: 0.15s;
+}
+
+.template:hover .dropdown-content .botao-compra:hover {
+    box-shadow: 1px 1px 6px #1D1D1D;
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+    transition-duration: 0.15s;
 }
 
