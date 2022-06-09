@@ -25,20 +25,22 @@ function validar() {
                 }
 
                 else{
-                    confirmacaoSenhaUser.innerHTML = "As senhas não coincidem";
+                    document.getElementById('confirmacaoSenhaMsg').style.display = 'block';
                 }
             }
 
             else{
-                senhaMsg.innerHTML = "Senha muito fraca";
+                document.getElementById('senhaMsg').style.display = 'block';
             }
         }
 
         else{
-            emailMsg.innerHTML = "Email inválido";
+            document.getElementById('emailMsg').style.display = 'block';
         }
 
-    } 
+    } else {
+        document.getElementById('nomeMsg').style.display = 'block';
+    }
 }
 
 

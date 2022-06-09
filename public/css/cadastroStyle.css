@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -18,6 +18,7 @@
     font-size: 60px;
     height: 90px;
     margin: 0 auto;
+    overflow: hidden;
 }
 .logo .txt-logo {
     font-family: 'Prompt', sans-serif;
@@ -43,9 +44,10 @@
 
 .container-form {
     display: flex;
+    position: relative;
     flex-direction: column;
     background: #5A5A5A;
-    height: 750px;
+    height: 720px;
     box-shadow: 0px 4px 16px #000000;
     width: 90vw;
     margin: 15px auto;
@@ -60,6 +62,7 @@
     font-weight: 500;
     text-align: center;
     margin-top: 50px;
+    overflow: hidden;
 }
 
 .formulario {
@@ -67,7 +70,7 @@
     flex-direction: column;
     margin: 0 auto;
     margin-top: 3vh;
-    height: 420px;
+    height: 440px;
     width: 300px;
 }
 
@@ -81,15 +84,25 @@
 }
 
 .formulario .nome-campo {
+    height: 40px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: #FFFFFF;
     font-size: 22px;
+    overflow: hidden;
+    outline: none;
+}
+
+::-webkit-input-placeholder  {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color:#000000be; 
+    text-align: center;
 }
 
 .btn-cadastro {
     margin: 0 auto;
-
+    margin-top: 10px;
     width: 200px;
     height: 50px;
     border-style: none;
@@ -116,22 +129,18 @@
 
 #redirect-login {
     font-family: 'Quicksand', sans-serif;
-    width: 220px;
+    width: 250px;
     margin: 0 auto;
+    padding-bottom: 40px;
     text-align: center;
     text-decoration: none;
     color: #F5D639;
     font-size: 20px;
     margin-top: 50px;
-    transform: scale(1);
-    transition: all .2s ease-in-out;
-    transition-duration: 0.2s;
+    overflow: hidden;
 }
 
 #redirect-login:hover {
-    transform: scale(1.05);
-    transition: all .2s ease-in-out;
-    transition-duration: 0.2s;
     text-shadow: 0px 1px 8px #F5D639;
 }
 
@@ -141,4 +150,16 @@
     display: flex;
     position: absolute;
     color: #F5D639;
+}
+
+.erro {
+    display: none;
+    color: #ff4949;
+    text-shadow: 1px 1px 2px #1d1d1d;
+    height: 30px;
+    font-family: 'Quicksando', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+    /* margin-bottom: 10px; */
 }

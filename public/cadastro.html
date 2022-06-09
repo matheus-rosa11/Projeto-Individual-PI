@@ -22,17 +22,17 @@
             <h1>CADASTRO</h1>
             <div class="formulario">
                 <p class="nome-campo">Nome</p>
-                <input id="ipt_nome" class="campo" type="text">
-                <p id="nomeMsg"></p>
+                <input id="ipt_nome" class="campo" type="text" placeholder="Insira aqui o seu nome">
+                <p class="erro" id="nomeMsg">Nome inválido</p>
                 <p class="nome-campo">Email</p>
-                <input id="ipt_email" class="campo" type="text">
-                <p id="emailMsg"></p>
+                <input id="ipt_email" class="campo" type="text" placeholder="Insira aqui o seu e-mail">
+                <p class="erro" id="emailMsg">Email inválido</p>
                 <p class="nome-campo">Senha</p>
-                <input id="ipt_senha" class="campo" type="password">
-                <p id="senhaMsg"></p>
+                <input id="ipt_senha" class="campo" type="password" placeholder="********">
+                <p class="erro" id="senhaMsg">Senha muito fraca</p>
                 <p class="nome-campo">Confirmar Senha</p>
-                <input id="ipt_confirmacao_senha" class="campo" type="password">
-                <p id="confirmacaoSenhaMsg"></p>
+                <input id="ipt_confirmacao_senha" class="campo" type="password" placeholder="********">
+                <p class="erro" id="confirmacaoSenhaMsg">As senhas não coincidem</p>
             </div>
 
             <button onclick="validar()" class="btn-cadastro">CADASTRAR</button>

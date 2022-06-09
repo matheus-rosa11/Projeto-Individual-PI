@@ -90,19 +90,26 @@ header .header .menu ul li a {
 
 header .header .foto-perfil {
     height: 80px;
-    width: 80px;
+    width: 120px;
     margin-right: 70px;
 }
 
 header .header .foto-perfil .container-img {
     height: 100%;
-    width: 100%;
+    width: 80px;
     overflow: hidden;
     border-radius: 50px;
 }
 
 header .header .foto-perfil .container-img img {
     height: 100%;
+}
+
+header .sair {
+    position: absolute;
+    right: 16px;
+    font-size: 30px;
+    color: #F5D639;
 }
 
 .logo {

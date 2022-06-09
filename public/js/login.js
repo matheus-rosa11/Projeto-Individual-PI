@@ -42,8 +42,13 @@ function entrar() {
                 });
     
             } else {
+
+                alert('Nenhuma coma existente!');
     
                 console.log("Houve um erro ao tentar realizar o login!");
+                
+                ipt_email.value = '';
+                ipt_senha.value = '';
     
                 resposta.text().then(texto => {
                     console.error(texto);

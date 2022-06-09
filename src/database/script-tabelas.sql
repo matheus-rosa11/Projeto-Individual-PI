@@ -11,8 +11,7 @@ CREATE TABLE Usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nomeUsuario varchar(45),
 	emailUsuario varchar(45),
-	senhaUsuario varchar(45),
-	pontos int
+	senhaUsuario varchar(45)
 );
 
 CREATE TABLE Produto (

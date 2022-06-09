@@ -4,13 +4,6 @@ insert into usuario VALUES
     (null, 'Doulgas', 'doulgas@email.com', 'doulgas123', 0),
     (null, 'Eduardo', 'eduardo@email.com', 'eduardo123', 0);
 
-insert into curso VALUES   
-    (null, 'V1', 10.00),
-    (null, 'V2', 10.00),
-    (null, 'V3', 10.00),
-    (null, 'C1', 10.00),
-    (null, 'C2', 10.00),
-    (null, 'C3', 10.00);
 
 insert into produto(nomeProduto, descricao, preco) VALUES
     ('Combo de Utilitários', 'Diversos produtos úteis para você tocar suas músicas!', 100.00),
